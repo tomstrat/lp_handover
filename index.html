@@ -105,6 +105,18 @@
     <div class="article">
       <h1>Spreadsheets</h1>
       <div class="innerArticle">
+        <h2>TC Reports</h2>
+        <article>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu rutrum velit. Sed volutpat imperdiet nisl,
+            vel
+            euismod ipsum maximus id. Cras at accumsan ligula. Fusce fermentum consequat neque a fermentum. Nunc in urna
+            a
+            lorem commodo venenatis nec ac risus. Aliquam libero est, efficitur ut mi ut, finibus congue nibh.
+            Pellentesque
+            nec pharetra lorem. Curabitur urna dolor, egestas vitae blandit eget, pretium cursus turpis.</p>
+        </article>
+      </div>
+      <div class="innerArticle">
         <h2>Phone Data</h2>
         <article>
           <h3>BT</h3>
@@ -127,18 +139,6 @@
       </div>
       <div class="innerArticle">
         <h2>Allocation</h2>
-        <article>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu rutrum velit. Sed volutpat imperdiet nisl,
-            vel
-            euismod ipsum maximus id. Cras at accumsan ligula. Fusce fermentum consequat neque a fermentum. Nunc in urna
-            a
-            lorem commodo venenatis nec ac risus. Aliquam libero est, efficitur ut mi ut, finibus congue nibh.
-            Pellentesque
-            nec pharetra lorem. Curabitur urna dolor, egestas vitae blandit eget, pretium cursus turpis.</p>
-        </article>
-      </div>
-      <div class="innerArticle">
-        <h2>TC Reports</h2>
         <article>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu rutrum velit. Sed volutpat imperdiet nisl,
             vel
@@ -220,3 +220,61 @@
 </body>
 
 </html>
+
+<!--
+Recommended Plugins:
+Wordpress is home to a huge amount of plugins, many of which are poorly designed or solve very specific problems, some of which can even be harmful to a Wordpress site.
+I have listed below some plugins we use on the large majority of sites and ones I would turn to before others:
+•	Contact Form 7 (contact form)
+•	Yoast SEO (SEO)
+•	Really Simple SSL
+•	Better Search Replace
+•	Headers and Footers (for accessing head of documents)
+•	Elementor (builder)
+•	Woo Commerce (shop)
+•	Code Snippets (custom PHP)
+•	ACF (Custom Fields)
+•	Hustle (popups)
+•	Smush (image compression)
+FMF
+One of the more complex sites we house with Wordpress and host on Siteground is Fit My Floor.
+While I won’t go into detail on how to develop for the site or maintain what is there (they are replacing soon) I will explain its basic infrastructure and any quirks to be aware of.
+FMF is hosted on Siteground, the sole reason is to do with space requirements and the ability to access more than just the public_html folder. I would recommend you leave this site on here until they replace it, as you may run into issues putting it onto Godaddy.
+FMF’s origin was developed with UPUGO. This means that there are some skeletons in the closet that can appear from time to time. The main one being the strange configuration they set for the shop when FMF wasn’t selling online. Once UPUGO we’re gone we have worked hard to convert their work into the online shop it is today. What this means, is that there are sections of the site that are NOT online shop, and these are here for legacy purposes.
+The “Online Shop” section has its own products that are categorised by “real product” on the back end. Without this checked, the product will not be available for purchase, or appear on the “Online Shop section”. 
+Many of the real products also have a lot of customisation with new fields depending on category and custom styling for the single item pages. I recommend this not be touched or changed, as the code written for it is complicated and can tank the site if messed with.
+Directory Generator
+This is the tool used to download XML from the current database. Its in a hidden URL location: “database.ad.localpages.co.uk/index.php?target=directorygenerator”.
+Its simple to use, simply pick a book to download and choose XML. 
+DO NOT choose XML + AUI as this setting is in testing and doesn’t do as intended.
+There is a guide on SharePoint on how to add this data to the InDesign document found here: https://localpages.sharepoint.com/:f:/s/LocalPages/Eosi_ux-rB9UqEi-55s0Cv8B5F88q5zNLVaTLj3i7Tonuw?e=SpeQps
+
+Check all free entries
+While the current database is still in use you will need to ensure all free entries are “checked” or compilated. The page to do this is in Books -> Select Book -> All Free Entries.
+There are check boxes next to all the free entries that need to be ticked then submitted (at the top) for them to be added to the XML download. Many of the books have thousands of these and the task of ticking them all can take a long time. A solution to this would be to use the code below in the console to mass tick them all. 
+Right click the webpage and select inspect. Navigate to the console tab and paste this code in and submit:
+TC Reports
+Regarding any spreadsheet I have worked on in the past, chances are you will find its location in TC Reports which is on sharepoint here: https://localpages.sharepoint.com/:f:/s/LocalPages/ErqzJ70sNuBFkmtKtjzfEocBvtyPksKnmLVTCYLf0YxH_w?e=7YRSFM
+Feel free to move, edit and use to your wishes. You may find spreadsheets I have worked on that you need, or formulae that I wrote in which you can steal and use on other spreadsheets.
+The below topics covered are all based inside of TC reports.
+BT
+The BT phone data can be found in TC Reports under Sales Call Monitor. BT Phone data is found on their portal: https://btcloudvoice.bt.com/businessportal/login.jsp. Login credentials can be found with Ollie. 
+The data retrieved is only based on the landlines of Local Pages, for Sales purposes this is now virtually mute as sales primarily use their mobile phones. That being said this data can still be used to find numbers who called Local Pages or who employees called from the landlines. 
+This portal can also be used to update the settings of the phones in the office. There are MANY settings all of which can be confusing (I don’t fully understand them all). Despite this the support team for BT Cloud Voice are very helpful and always give me the needed information. https://btbusiness.custhelp.com/app/categories/contact/c/5081
+Vodafone
+The Vodafone data can be found in TC Reports under Sales Call Monitor. Vodafone data is found on their portal: https://online.vodafone.co.uk/dispatch/Portal/appmanager/vodafone/wrp?_nfpb=true&_pageLabel=Page_AccReg_LoginService&pageID=MV_0000 . Login credentials can be found with Ollie.
+The data retrieved is based on the mobile phones of Local Pages. This is the primary data for Sales. It should be noted that the data can only be taken in 3-6 month intervals and starting and ending in the middle of the month. This is due to the billing period. 
+It should also be noted that their portal is very temperamental and often breaks or is offline. Also many of the buttons don’t do as intended or don’t work at all.
+Allocation
+Allocation data and spreadsheets can be found in TC Reports under Allocation. 
+There are lots of files here, mainly things that are for the current round of allocation. Previous data and spreadsheets can be found in the Archive folder. 
+The most notable folder for someone taking over is the Tools folder. This folder contains all the necessary information to build a new allocation folder using the data available to us. (this will change entirely when the new database is implemented).
+•	Instructions.txt is a verbose list of steps to take, to make a new allocation datasheet.
+•	IDS.csv and IDS.xlsx are a list of the IDs for the customers and staff on our current database.
+•	Home Book.csv is a list of the customers home books.
+
+
+
+
+
+-->
