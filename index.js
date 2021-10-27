@@ -1,6 +1,6 @@
 const search = document.querySelector(".searchbox");
 const articles = document.querySelectorAll(".article");
-
+const copys = document.querySelectorAll(".copy");
 
 const searchKeyword = (list, keyword) => {
   list.forEach(article => {
@@ -33,4 +33,21 @@ const reset = () => {
 search.addEventListener("input", (e) => {
   reset();
   searchKeyword(articles, search.value);
+});
+
+copys.forEach(copy => {
+  copy.addEventListener("click", e => {
+    const snippet = e.target.parentElement.children[0].innerText;
+    navigator.clipboard.writeText(snippet).then(() => {
+      console.log("copying successful");
+      e.target.classList.add("copySuccess");
+      e.target.innerText = "Copied";
+      setTimeout(() => {
+        e.target.classList.remove("copySuccess");
+        e.target.innerText = "Copy Code";
+      }, 3000);
+    }).catch(error => {
+      console.log("copying failed");
+    })
+  });
 });

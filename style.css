@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
-body{
+body {
   margin: 0px;
   padding: 0px;
   background-color: rgb(240, 239, 235);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-.search{
-  display:flex;
+.search {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100px;
 }
-.search input{
+.search input {
   margin: 10px;
   width: 60%;
   border: none;
@@ -24,74 +24,102 @@ body{
   box-shadow: 1px 1px 5px black;
   margin-bottom: 20px;
 }
-.search input:focus{
+.search input:focus {
   outline: none;
 }
-.search button{
-  border:none;
-  background-color:#0065bd;
-  color:white;
+.search button {
+  border: none;
+  background-color: #0065bd;
+  color: white;
   font-size: 20px;
   border-radius: 50px;
   padding: 10px;
   width: 100px;
   transition: box-shadow 0.2s linear;
 }
-.search button:hover{
+.search button:hover {
   box-shadow: 2px 2px 5px black;
 }
-.search button:active{
+.search button:active {
   background-color: #004c8f;
 }
 
-.content{
-  display:flex;
+.content {
+  display: flex;
   flex-direction: column;
   margin-left: 20%;
 }
-.content article{
+.content article {
   margin-left: 5%;
 }
-.content a{
+.content a {
   font-weight: 600;
   color: #0065bd;
 }
-h1{
+h1 {
   font-size: 40px;
   font-weight: 700;
-  color:white;
+  color: white;
   background-color: #0065bd !important;
-  padding-left:20px;
+  padding-left: 20px;
   margin-left: -50px;
   border-radius: 50px 0px 0px 50px;
 }
-h2{
+h2 {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 5px;
   background-color: #cacaca !important;
-  padding-left:20px;
+  padding-left: 20px;
   border-radius: 50px 0px 0px 50px;
 }
-h3{
+h3 {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
 }
-h1,h2,h3,p{
+h1,
+h2,
+h3,
+p {
   transition: all 0.3s linear;
 }
-.innerArticle{
+.innerArticle {
   transition: all 0.3s linear;
 }
-.innerArticle:hover{
+.innerArticle:hover {
   transform: translateX(-20px);
 }
-article p{
+article p {
   padding-right: 20px;
 }
 
-.hidden{
+.hidden {
   transform: scaleY(0);
-  height:0px;
+  height: 0px;
+}
+
+.snippet {
+  background-color: rgb(206, 206, 206);
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.copy {
+  background-color: #0065bd;
+  color: white;
+  padding: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  border: 1px solid black;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.copySuccess {
+  background-color: #34eb52 !important;
+  color: black !important;
+}
+.copy:hover {
+  background-color: white;
+  color: black;
 }
